@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- HTML Metadata -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pawbs Engine</title>
+	
+	<!-- Third-Party Imports -->
+	<link href="./css/xp.css" rel="stylesheet" type="text/css" media="all">
+	
+	<!-- Website CSS -->
+	<link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
+	
+</head>
+<body>
+	
+	<!-- Pawbs Window -->
+	<div id="pawbs-window" class="window window-size-regular">
+		
+		<!-- Window Title -->
+		<div class="title-bar">
+			<div class="title-bar-text">Pawbs Engine</div>
+			<div class="title-bar-controls">
+				<button aria-label="Minimize"></button>
+				<button aria-label="Maximize"></button>
+				<button aria-label="Close"></button>
+			</div>
+		</div>
+		
+		<!-- Window Body -->
+		<div class="window-body">
+			
+			<!-- Tab Control -->
+			<div class="tab-control">
+				
+				<!-- Tab Buttons -->
+				<menu role="tablist">
+					<button aria-controls="about" aria-selected="true">About</button>
+					<button aria-controls="game">Demo</button>
+					<button aria-controls="links">Links</button>
+				</menu>
+				
+				<!-- About Tab -->
+				<article id="about" role="tabpanel">
+					<fieldset>
+						<legend>About Pawbs Engine</legend>
+						<img src="./images/pawbs.gif">
+						<p>Pawbs Engine is a basic first-person shooter game engine built on three.js, an easy-to-use JavaScript library that provides a simple interface through which to make use of the WebGL API.</p>
+						<p>This engine also utilizes Tauri to quickly perform cross-platform compilation of application binaries from the game files.</p>
+						<br />
+						<br />
+						<br />
+						<br />
+						<img src="./images/dogtoilet.gif" style="float: right;">
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<img src="./images/dogwalk.gif">
+					</fieldset>
+				</article>
+				
+				<!-- Game Tab -->
+				<article id="game" role="tabpanel" hidden>
+					<iframe width="100%" height="100%" src="https://pawbs-engine.fly.dev/" frameborder="0" allowfullscreen></iframe>
+				</article>
+				
+				<!-- Links Tab -->
+				<article id="links" role="tabpanel" hidden>
+					<ul class="tree-view">
+						<li>Website
+							<ul>
+								<li><a href="https://pawbs-engine.neocities.org/">Neocities Website</a></li>
+							</ul>
+						</li>
+						<li>GitHub
+							<ul>
+								<li><a href="https://github.com/WolfPup1232/pawbs-engine">Pawbs Engine GitHub</a></li>
+								<li><a href="https://github.com/WolfPup1232/pawbs-engine-neocities">Neocities Website GitHub</a></li>
+							</ul>
+						</li>
+						<li>Social Media
+							<ul>
+								<li><a href="https://bsky.app/profile/wolfpuppy.bsky.social">WolfPup's Bluesky</a></li>
+								<li><a href="https://bsky.app/profile/servingtuna.bsky.social">ServingTuna's Bluesky</a></li>
+							</ul>
+						</li>
+					</ul>
+					<br />
+					<progress></progress>
+				</article>
+				
+				<!-- Window Buttons -->
+				<section class="window-buttons field-row">
+					<button>OK</button>
+					<button>Cancel</button>
+				</section>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	<script>
+		
+		/**
+		 * HTML DOM content loaded event.
+		 */
+		document.addEventListener("DOMContentLoaded", function()
+		{
+			
+			// Get tab buttons and panels
+			const tab_buttons = document.querySelectorAll("[role='tablist'] button");
+			const tab_panels = document.querySelectorAll("[role='tabpanel']");
+			
+			// Iterate through each tab button...
+			tab_buttons.forEach(button => {
+				
+				// Initialize tab button's click event...
+				button.addEventListener("click", function()
+				{
+					
+					// Get pawbs window
+					const window = document.querySelector('#pawbs-window');
+					
+					// Reset window size
+					window.classList.remove("window-size-regular");
+					window.classList.remove("window-size-game");
+					
+					// Set window size according to selected tab button...
+					if (this.getAttribute("aria-controls") == "game")
+					{
+						window.classList.add("window-size-game");
+					}
+					else
+					{
+						window.classList.add("window-size-regular");
+					}
+					
+					// Deactivate all tab buttons
+					tab_buttons.forEach(btn => btn.setAttribute("aria-selected", "false"));
+					
+					// Hide all tab panels
+					tab_panels.forEach(panel => panel.hidden = true);
+					
+					// Activate clicked tab button
+					this.setAttribute("aria-selected", "true");
+					
+					// Show corresponding tab panel...
+					const tab_panel = document.getElementById(this.getAttribute("aria-controls"));
+					if (tab_panel)
+					{
+						tab_panel.hidden = false;
+					}
+					
+				});
+				
+			});
+			
+		});
+		
+	</script>
+</body>
+</html>

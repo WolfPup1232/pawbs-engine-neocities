@@ -1,0 +1,68 @@
+/* -----------------------------
+Pawbs Engine Neocities style.css
+------------------------------*/
+
+/* HTML Elements */
+body {
+	color: #000000;
+	font-family: Verdana;
+	background-image: url("../images/city-dusk.jpg");
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+/* Windows */
+#pawbs-window {
+	margin: 2em auto;
+}
+.window-size-game {
+	width: 1412px;
+	height: 886px;
+}
+.window-size-regular {
+	width: 800px;
+	height: 600px;
+}
+.window-buttons {
+	justify-content: flex-end;
+}
+
+/* Tab Control */
+.tab-control {
+	padding: 0px 6px;
+}
+
+/* Tab Pages */
+#about {
+	height: 470px;
+}
+#about fieldset {
+	height: 448px;
+}
+#game {
+	width: 1366px;
+	height: 768px;
+	padding: 8px;
+}
+#links {
+	height: 470px;
+}
+#links ul.tree-view {
+	height: 436px;
+}
+#links progress {
+	width: 30%;
+}
+
+
+/* Third-Party Library Overrides */
+
+/* XP.css TreeView  */
+ul.tree-view a {
+	color: #0000ff !important;
+	text-decoration: underline !important;
+}
+ul.tree-view a:focus {
+  background-color:#2267cb !important;
+  color:#ffffff !important;
+}
