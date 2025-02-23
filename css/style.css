@@ -4,27 +4,51 @@ Pawbs Engine Neocities style.css
 
 /* HTML Elements */
 body {
-	color: #000000;
-	font-family: Verdana;
-	background-image: url("../images/city-dusk.jpg");
-	background-repeat: repeat;
+	font-family: Arial;
+	font-size: 12px;
+	color: #222222;
+	background-image: url("../images/backgrounds/focus-scientific.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	transition: background-image 2s ease-in-out;
 }
 
 /* Windows */
 #pawbs-window {
-	margin: 2em auto;
+	margin: 0px auto;
+}
+#pawbs-iframe {
+	position: absolute;
+	width: 1366px;
+	height: 768px;
+	top: 50.7%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .window-size-game {
 	width: 1412px;
 	height: 886px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .window-size-regular {
 	width: 800px;
 	height: 600px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .window-buttons {
 	justify-content: flex-end;
+}
+.window-icon {
+	float: left;
+	margin-right: 4px;
 }
 
 /* Tab Control */
@@ -54,15 +78,30 @@ body {
 	width: 30%;
 }
 
+/* Misc. */
+.github-link {
+	margin: 0px;
+	padding: 0px 24px;
+}
+.paw-signature {
+	font-size: 36px;
+	margin: 0px;
+}
+
 
 /* Third-Party Library Overrides */
 
-/* XP.css TreeView  */
+/* XP.css TreeView	*/
 ul.tree-view a {
 	color: #0000ff !important;
 	text-decoration: underline !important;
 }
 ul.tree-view a:focus {
-  background-color:#2267cb !important;
-  color:#ffffff !important;
+	background-color:#2267cb !important;
+	color:#ffffff !important;
+}
+ul.tree-view summary::marker {
+	display: none !important;
+	content: "" !important;
+	opacity: 0 !important;
 }

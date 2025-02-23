@@ -7,6 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pawbs Engine</title>
 	
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
 	<!-- Third-Party Imports -->
 	<link href="./css/xp.css" rel="stylesheet" type="text/css" media="all">
 	
@@ -21,7 +24,7 @@
 		
 		<!-- Window Title -->
 		<div class="title-bar">
-			<div class="title-bar-text">Pawbs Engine</div>
+			<div class="title-bar-text"><img src="./favicon.ico" class="window-icon" width="16" height="16"> Pawbs Engine</div>
 			<div class="title-bar-controls">
 				<button aria-label="Minimize"></button>
 				<button aria-label="Maximize"></button>
@@ -47,48 +50,60 @@
 					<fieldset>
 						<legend>About Pawbs Engine</legend>
 						<img src="./images/pawbs.gif">
-						<p>Pawbs Engine is a basic first-person shooter game engine built on three.js, an easy-to-use JavaScript library that provides a simple interface through which to make use of the WebGL API.</p>
-						<p>This engine also utilizes Tauri to quickly perform cross-platform compilation of application binaries from the game files.</p>
+						<p>
+							<a href="https://github.com/WolfPup1232/pawbs-engine" target="_blank"><img src="https://img.shields.io/badge/Wruff!-Wruff!%E2%99%A5-purple.svg?logo=data:image/svg%2bxml;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVDhPjdNPK0RRGMfxY/wfU0QpC0shrERkoxRehyZLK1tegY3dZCHeAFs7yYImxUZNdlazMizEpNH1/Z37nOveWzK/+vTce+5zTufOndMRRZHLpYgWvvzdb0poQs+SFKyGrOAR91jWgKWMJ1xiVANJtIOUM4TU0I05tDRg2UEyJ7+DPqvKJGawhk4NWPqt+oQFBq2eWw3R76D3DvnGRXxpc9hGBS/Ys20d4hVHdj+Ca9RRtrF9NFDRzSdC1qGxAaslFO261+omQj70Cjd+K3GWrI7hFDXo1z/BOJRFq8qtVpxGFc+YxQbekI/G9Ew96tWcKS0gXWYBTfwVPVNP6M/8D/TNH/Bf1KNePy+9wDbajXozCxSgd2o36tWc5I80hIn4MhMdnMzhsahXc1z6NB5gC3VUcYU7KPNYhT6hPvExdpFZQBnGO/JHOaQHOtYNf+ec+wHhxe4h70smUwAAAABJRU5ErkJggg==" alt="Good Puppy!&amp;lt;3"></a>
+							<a href="https://github.com/WolfPup1232/pawbs-engine?tab=MIT-1-ov-file#readme" target="_blank"><img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"></a>
+							<a href="https://pawbs-engine.neocities.org/" target="_blank"><img src="https://img.shields.io/badge/Neocities-Website-%23B8681C.svg" alt="Neocities Website"></a>
+							<a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><img src="https://img.shields.io/badge/Firefox-135.0-blue.svg?logo=firefoxbrowser" alt="Firefox Version"></a>
+							<a href="https://github.com/WolfPup1232/pawbs-engine" target="_blank"><img src="https://img.shields.io/badge/Good-Puppy!%F0%9F%A6%B4-%23880015.svg?logo=data:image/svg%2bxml;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEySURBVDhPjdM7TsMwAIdxF1QelQCJx4JEFyRm7sDKyA3gIrByES7AwgAsTEUsbCBGxENF4rEgQJTvS+PKJGmbv/Sr7dhxajsJvV6vrgNcoo1lNDHoTweOcwbzhnvY3sQiWhOhXlpo96thHqd4xBVucNFgtikq5isvq7KOa8xmrRA+83ImL4P/6ATHaHhhSFYRJzFOMJiEnLv2B5gdLGClwI3VHtwb84FndOFebTjRPswP7Cxy8B12sYZDbMOH+oDsMPyZhJ110sEWsptTsTIHn14nL1jCv4ni8U/nZZ38ovTaxAujTqwY1lFO1Qv5jiPcopuXtr0+PPkaPea4R09wz/yW4jdl2+vGcY6v3KM0LtM9+4b/yNL2yOWnEzWTsniT7bS/lDjRKzr9albaTjOmP4Q/crnL1xm1tGoAAAAASUVORK5CYII=" alt="Good Puppy!"></a>
+						</p>
+						<p><strong>Pawbs Engine</strong> is a <em>very</em> under-construction first-person shooter game engine built on <strong>three.js</strong>, an easy-to-use JavaScript library that provides a simple interface for making use of the WebGL API.</p>
+						<p><strong>Multiplayer Game Support -</strong> Pawbs Engine comes with two <strong>Node.js</strong> servers for hosting online multiplayer games. A <strong>WebSocket Dedicated Server</strong> for hosting a multiplayer game in a server environment, and a <strong>WebRTC Peer-To-Peer Signaling Server</strong> for managing peer-to-peer multiplayer games.</p>
+						<p><strong>In-Game World Editor -</strong> Ctrl+E toggles the initial stages of an in-game world editor with online multiplayer support.</p>
+						<p><strong>Cross-Platform Application Binaries -</strong> This engine also utilizes <strong>Tauri</strong> to quickly perform cross-platform compilation of application binaries from game files.</p>
+						<p><strong>Docker &amp; Fly.io Support -</strong> A Dockerfile and .dockerignore, and a fly.toml config are included as a working example of containerization support.</p>
 						<br />
-						<br />
-						<br />
-						<br />
-						<img src="./images/dogtoilet.gif" style="float: right;">
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<center><img src="./images/dogwalk.gif"></center>
+						<hr>
+						<ul class="github-link">
+							<li><strong>GitHub</strong>: <a href="https://github.com/WolfPup1232/pawbs-engine" target="_blank">https://github.com/WolfPup1232/pawbs-engine</a></li>
+						</ul>
+						<p class="paw-signature">🐾</p>
 					</fieldset>
 				</article>
 				
 				<!-- Game Tab -->
-				<article id="game" role="tabpanel" hidden>
-					<iframe width="100%" height="100%" src="https://pawbs-engine.fly.dev/" frameborder="0" allowfullscreen></iframe>
-				</article>
+				<article id="game" role="tabpanel" hidden>&nbsp;</article>
 				
 				<!-- Links Tab -->
 				<article id="links" role="tabpanel" hidden>
 					<ul class="tree-view">
-						<li>Website
-							<ul>
-								<li><a href="https://pawbs-engine.neocities.org/" target="_blank">Neocities Website</a></li>
-							</ul>
-						</li>
 						<li>GitHub
 							<ul>
 								<li><a href="https://github.com/WolfPup1232/pawbs-engine" target="_blank">Pawbs Engine GitHub</a></li>
-								<li><a href="https://github.com/WolfPup1232/pawbs-engine-neocities" target="_blank">Neocities Website GitHub</a></li>
+							</ul>
+						</li>
+						<li>Fly.io
+							<ul>
+								<li><a href="https://pawbs-engine.fly.dev/" target="_blank">Official WolfPup Dedicated Server🏳️‍⚧️</a></li>
 							</ul>
 						</li>
 						<li>Social Media
 							<ul>
-								<li><a href="https://bsky.app/profile/wolfpuppy.bsky.social" target="_blank">WolfPup's Bluesky</a></li>
-								<li><a href="https://bsky.app/profile/servingtuna.bsky.social" target="_blank">ServingTuna's Bluesky</a></li>
+								<li><a href="https://wolfpuppy.bsky.social" target="_blank">WolfPup's Bluesky</a></li>
+								<li><a href="https://servingtuna.bsky.social" target="_blank">ServingTuna's Bluesky</a></li>
 							</ul>
 						</li>
+						<!--<li>
+							<details>
+								<summary>Neocities Resources</summary>
+								<ul>
+									<li><a href="https://wordpress.org/photos/" target="_blank">https://wordpress.org/photos/</a></li>
+									<li><a href="https://gifcities.org/" target="_blank">https://gifcities.org/</a></li>
+									<li><a href="https://www.flamingtext.com/" target="_blank">https://www.flamingtext.com/</a></li>
+									<li><a href="https://botoxparty.github.io/XP.css/" target="_blank">https://botoxparty.github.io/XP.css/</a></li>
+								</ul>
+							</details>
+						</li>-->
 					</ul>
 					<br />
 					<progress></progress>
@@ -106,6 +121,33 @@
 		
 	</div>
 	<script>
+	
+		/**
+		 * Global array of background images.
+		 */
+		const backgrounds = [
+			"city-dusk.jpg",
+			"city-morning.jpg",
+			"city-road.jpg",
+			"city-tokyo.jpg",
+			"field.jpg",
+			"forest.jpg",
+			"forest-fall.jpg",
+			"grass.jpg",
+			"grass-short.jpg",
+			"grass-tall.jpg",
+			"grocery-store.jpg",
+			"ice-cream.jpg",
+			"ocean.jpg",
+			"park.jpg",
+			"parking.jpg",
+			"park-summer.jpg",
+			"plant-wall.jpg",
+			"pond.jpg",
+			"restaurant.jpg",
+			"restaurant-hall.jpg",
+			"trees.jpg",
+		];
 		
 		/**
 		 * HTML DOM content loaded event.
@@ -113,16 +155,28 @@
 		document.addEventListener("DOMContentLoaded", function()
 		{
 			
-			// Get tab buttons and panels
+			// Change the background to a random image
+			changeBackground();
+			
+			// Initialize a timer to change the background every 10 seconds
+			setInterval(changeBackground, 10000);
+			
+			// Get all tab buttons and panels elements
 			const tab_buttons = document.querySelectorAll("[role='tablist'] button");
 			const tab_panels = document.querySelectorAll("[role='tabpanel']");
 			
-			// Iterate through each tab button...
+			// Iterate through each tab button element...
 			tab_buttons.forEach(button => {
 				
 				// Initialize tab button's click event...
 				button.addEventListener("click", function()
 				{
+					
+					// Get pawbs iframe
+					const iframe = document.querySelector('#pawbs-iframe');
+					
+					// Hide pawbs iframe
+					iframe.style.display = "none";
 					
 					// Get pawbs window
 					const window = document.querySelector('#pawbs-window');
@@ -135,6 +189,9 @@
 					if (this.getAttribute("aria-controls") == "game")
 					{
 						window.classList.add("window-size-game");
+						
+						// Show pawbs iframe
+						iframe.style.display = "block";
 					}
 					else
 					{
@@ -163,6 +220,56 @@
 			
 		});
 		
+		/**
+		 * Randomly sets a new background image from the global array of background images.
+		 */
+		function changeBackground()
+		{
+			
+			// Get a random image from the array
+			const random_image = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+			
+			// Initialize a temporary overlay element
+			const overlay = document.createElement("div");
+			overlay.style.position = "fixed";
+			overlay.style.top = "0";
+			overlay.style.left = "0";
+			overlay.style.width = "100%";
+			overlay.style.height = "100%";
+			overlay.style.backgroundImage = `url("../images/backgrounds/${random_image}")`;
+			overlay.style.backgroundSize = "cover";
+			overlay.style.backgroundPosition = "center";
+			overlay.style.backgroundRepeat = "no-repeat";
+			overlay.style.opacity = "0";
+			overlay.style.transition = "opacity 2s ease-in-out";
+			overlay.style.zIndex = "-1";
+			
+			// Add overlay element to body
+			document.body.appendChild(overlay);
+			
+			// Fade-in background image
+			setTimeout(() => { overlay.style.opacity = "1"; }, 50);
+			
+			// After fade-in...
+			setTimeout(() => {
+				
+				// Update body
+				document.body.style.backgroundImage = `url("../images/backgrounds/${random_image}")`;
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center";
+				document.body.style.backgroundRepeat = "no-repeat";
+				
+				// Remove overlay element from body
+				document.body.removeChild(overlay);
+				
+			}, 2000);
+			
+		}
+		
 	</script>
+	
+	<!-- Pawbs Engine Fly.io Embed -->
+	<iframe id="pawbs-iframe" width="100%" height="100%" src="https://pawbs-engine.fly.dev/" frameborder="0" style="display: none;" allowfullscreen></iframe>
+	
 </body>
 </html>
